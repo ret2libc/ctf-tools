@@ -18,14 +18,14 @@ END
 
 set +e
 ctf-tools-pip freeze 2>&1 >/dev/null
-workon ctftools
+source ${WORKON_HOME}/ctftools/bin/activate
 set -e
 python $PY_TEST_FILE
 deactivate
 
 set +e
 ctf-tools-pip3 freeze 2>&1 >/dev/null
-workon ctftools3
+source ${WORKON_HOME}/ctftools3/bin/activate
 set -e
 python $PY_TEST_FILE
 deactivate
