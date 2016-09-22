@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pip install --no-use-wheel -U -vvv capstone
+ctf-tools-pip install --no-use-wheel -U -vvv capstone
 #ctf-tools-pip3 install -U capstone
