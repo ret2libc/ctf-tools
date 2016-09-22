@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 PY_TEST_FILE=$(mktemp)
 cat << END > $PY_TEST_FILE
@@ -17,14 +17,12 @@ sys.exit(0)
 END
 
 set +e
-ctf-tools-pip freeze 2>&1 >/dev/null
 source ${WORKON_HOME}/ctftools/bin/activate
 set -e
 python $PY_TEST_FILE
 deactivate
 
 set +e
-ctf-tools-pip3 freeze 2>&1 >/dev/null
 source ${WORKON_HOME}/ctftools3/bin/activate
 set -e
 python $PY_TEST_FILE
