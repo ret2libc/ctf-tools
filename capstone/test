@@ -16,15 +16,15 @@ for idx, i in enumerate(md.disasm(CODE, 0x1000)):
 sys.exit(0)
 END
 
-source ${VIRTUALENVWRAPPER_SCRIPT}
-
 set +e
+ctf-tools-pip freeze 2>&1 >/dev/null
 workon ctftools
 set -e
 python $PY_TEST_FILE
 deactivate
 
 set +e
+ctf-tools-pip3 freeze 2>&1 >/dev/null
 workon ctftools3
 set -e
 python $PY_TEST_FILE
