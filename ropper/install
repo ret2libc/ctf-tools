@@ -2,6 +2,6 @@
 
 [ -e ropper ] || git clone --depth 1 https://github.com/sashs/Ropper.git ropper
 
-pip install --no-use-wheel --no-cache-dir -I capstone
-pip install filebytes
-pip install -e ropper
+pip install -vvv --no-use-wheel --no-cache-dir -I capstone
+pip install -vvv filebytes
+pip install -vvv -e ropper
