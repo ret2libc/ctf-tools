@@ -1,4 +1,6 @@
 #!/bin/bash
 
-ctf-tools-pip install -U -vvv capstone
+source ${VIRTUALENVWRAPPER_SCRIPT}
+workon ctftools
+pip install -U -vvv capstone
 #ctf-tools-pip3 install -U capstone
