@@ -41,4 +41,5 @@ if [[ -z "${VIRTUAL_ENV+x}" || "$VIRTUAL_ENV" != "$VE_DIR" ]]; then
     source "$VE_DIR/bin/activate"
 fi
 
+echo "virt env = ${VIRTUAL_ENV}"
 exec pip "$@"
