@@ -186,7 +186,9 @@ if [ "$TOOL" == "all" ]
 then
 	for t in $($0 list)
 	do
-		$0 $ACTION $t
+		if [ "$t" != "pyvmmonitor" ]; then
+			$0 $ACTION $t
+		fi
 	done
 elif [ -z "$TOOL" -a "$ACTION" != "list" -a "$ACTION" != "setup" ]
 then
